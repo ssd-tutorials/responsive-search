@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Responsive search with jQuery and PHP</title>
+	<meta name="description" content="Responsive search with jQuery and PHP" />
+	<meta name="author" content="Sebastian Sulinski" />
+	<link rel="stylesheet" href="/css/core.css" type="text/css" media="screen" charset="utf-8" />	
+</head>
+<body>
+
+<div id="wrapper">
+
+
+	<form 
+		action="post" 
+		data-url="/mod/books.php" 
+		id="formBooks" 
+		class="loadTable" 
+		data-max="5" 
+		data-page="1"
+	>
+	
+		<div class="searchWrapper">
+			<input 
+				type="text" 
+				data-form="formBooks" 
+				name="searchBooks" 
+				id="searchBooks" 
+				class="search field" 
+			/>
+			<h2>Search Books</h2>
+		</div>
+		
+		<table id="formBooksTable">
+		
+			<caption>
+				There are <span id="formBooksCount">0</span> records : 
+				Page <span id="formBooksPage">0</span> of 
+				<span id="formBooksPageOf">0</span>
+			</caption>
+			
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th class="col1 nw tar">Category</th>
+					<th class="col1 nw tar">Author</th>
+					<th class="col1 nw tar">Price</th>
+				</tr>
+			</thead>
+			
+			<tbody></tbody>
+			
+			<tfoot>
+				<tr>
+					<td colspan="4" id="formBooksPaging"></td>
+				</tr>
+			</tfoot>
+		
+		</table>
+	
+	</form>
+	
+	<div class="divider"></div>
+	
+	<form 
+		action="post" 
+		data-url="/mod/countries.php" 
+		id="formCountries" 
+		class="loadTable" 
+		data-max="5" 
+		data-page="1"
+	>
+	
+		<div class="searchWrapper">
+			<input 
+				type="text" 
+				data-form="formCountries" 
+				name="searchCountries" 
+				id="searchCountries" 
+				class="search field" 
+			/>
+			<h2>Search Countries</h2>
+		</div>
+		
+		<table id="formCountriesTable">
+		
+			<caption>
+				There are <span id="formCountriesCount">0</span> records : 
+				Page <span id="formCountriesPage">0</span> of 
+				<span id="formCountriesPageOf">0</span>
+			</caption>
+			
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th class="col1 nw tar">Code</th>
+				</tr>
+			</thead>
+			
+			<tbody></tbody>
+			
+			<tfoot>
+				<tr>
+					<td colspan="4" id="formCountriesPaging"></td>
+				</tr>
+			</tfoot>
+		
+		</table>
+	
+	</form>
+
+</div>
+	
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="/js/core.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
